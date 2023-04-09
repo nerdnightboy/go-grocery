@@ -1,0 +1,122 @@
+.footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.footer2-content1{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px;
+}
+
+.footer2-content1 div{
+    width: 15%;
+    min-width: 250px;
+}
+
+.footer2-content1 .f1{
+    width: 15%;
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer2-content1 .f1 img{
+    width: 150px;
+    margin-bottom: 10px;
+}
+
+.footer2-content1 .f1 p{
+    font-size: 16px;
+    color: #2f2f2f;
+    font-weight: 200;
+    width: 100%;
+}
+
+.footer2-content1 .f1 .social1{
+    display: flex;
+    width: 200px;
+    cursor: pointer;
+}
+
+.footer2-content1 .f2{
+    padding-top: 20px;
+}
+
+.footer2-content1 .f2 h3{
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    width: 90%;
+}
+
+.footer2-content1 .f2 p{
+    font-size: 16px;
+    color: #2f2f2f;
+    font-weight: 200;
+    width: 90%;
+    margin: 3px 0px;
+    cursor: pointer;
+}
+.footer2-content1 .f2 p:hover{
+    color: var(--col1);
+}
+
+.footer2-content1 .f2 .inputcontainer{
+    display: flex;
+    flex-direction: row;
+    width: 220px;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+    border: 1px solid rgb(172, 172, 172);
+    margin: 10px 0px;
+    padding: 3px ;
+}
+
+.footer2-content1 .icon1 svg{
+    width: 20px;
+    height: 20px;
+}
+.footer2-content1 .icon2 svg{
+    width: 20px;
+    height: 20px;
+    color: var(--col1);
+    cursor: pointer;
+}
+
+.footer2-content1 .f2 .inputcontainer input{
+    width: 80%;
+    height: 30px;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    font-weight: 200;
+
+}
+.footer2-content2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 30px;
+    border-top: 1px solid #e0e0e0;
+}
+.footer2-content2 h3{
+    font-size: 16px;
+    font-weight: 500;
+}
+
+
+.footer2-content2 img{
+    width: 30%;
+    cursor: pointer;
+    height: 50px;
+}

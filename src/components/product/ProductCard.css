@@ -15,6 +15,7 @@
 .product .s1{
     height: 65%;
     width: 100%;
+    overflow: hidden;
 }
 
 .product .s1 img{
@@ -23,6 +24,7 @@
     object-fit: contain;
     transition: all .5s ease;
     cursor: pointer;
+
 
 }
 .product .s1 img:hover{

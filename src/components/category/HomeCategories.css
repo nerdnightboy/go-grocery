@@ -10,7 +10,7 @@
 
 .homecategories .container{
     width: 300px;
-    height: 300px;
+    height: 180px;
     overflow: hidden;
     display: flex;
     flex-wrap: wrap;
@@ -33,10 +33,21 @@
     align-items: center;
 }
 
+/* .homecategories .container .s2{
+    display: flex;
+} */
+
 .homecategories .container .content h1{
-    font-size: 30px;
-    font-weight: 300;
+    font-size: 20px;
+    font-weight: 400;
     margin: 0;
+}
+
+.homecategories .container .content p{
+    font-size: 15px;
+    font-weight: 300;
+    margin: 0px;
+    padding: 0px;
 }
 
 .homecategories .container:nth-child(1){
