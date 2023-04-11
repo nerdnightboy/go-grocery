@@ -1,9 +1,10 @@
 import React from 'react'
 import { Route, Routes, BrowserRouter } from 'react-router-dom'
-import Home from './pages/Home'
+import Home from './pages/homePage/Home'
 import './App.css'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import ProductPage from './pages/product/ProductPage';
 
 const App = () => {
   return (
@@ -11,6 +12,7 @@ const App = () => {
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/home' element={<Home />} />
+          <Route path='/product/:productid' element={<ProductPage />} />
           <Route path='*' element={<div>
             <h1>H-A-H-A Seems Like You Don't Have Enough Knowledge to Access Us. 404 BTW )</h1>
           </div>} />
