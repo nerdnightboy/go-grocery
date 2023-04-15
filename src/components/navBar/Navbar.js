@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import './Navbar.css'
 import logo from '../../assets/logo.png'
 import Dropdown from 'react-bootstrap/Dropdown'
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 
 const Navbar = () => {
   const [cartquantity, setcartquantity] = useState(0);
@@ -10,7 +10,7 @@ const Navbar = () => {
   return (
     <nav>
       <div className='s1'>
-        <img src={logo} alt='logo' className='logo' />
+        <NavLink to='/'><img src={logo} alt='logo' className='logo' /></NavLink>
         <div className='searchBar' >
           <input type='text' placeholder='Search for anything but not UFO' className='search' />
           <button>
