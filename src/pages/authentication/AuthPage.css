@@ -1,0 +1,125 @@
+.authpage{
+    width: 100%;
+    height: 115vh;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.authpage .authcont{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 80%;
+    height: 100%;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 4% auto;
+    background-color: white;
+
+}
+
+
+
+.authpage .authcont img{
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.authform{
+    display: flex;
+    flex-direction: column;
+    /* gap: 10px; */
+    width: 50%;
+    padding: 20px;
+}
+
+.authcont .formgroup{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+    margin: 5px 0px;
+}
+
+.authform h1{
+    color: black;
+    font-size: 3rem;
+    font-weight: 800;
+    margin: 0 0 20px 0;          
+    /* margin-top: 10px; */
+    margin-left: 28%;
+    padding: 0;
+    letter-spacing: 1px;
+}
+
+.authform label{
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.authform input{
+    width: 100%;
+    height: 40px;
+    border: 1px solid var(--col1);
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.authform .btn{
+    width: 100%;
+    height: 45px;
+    border: none;
+    outline: none;
+    background-color: var(--col1);
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+
+.authform .btn:hover{
+    color: var(--col1);
+    background-color: white;
+    border: 1px solid;
+}
+
+.authform p{
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: underline;
+    margin: top 5px;
+    color: gray;
+    text-align: right;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    
+}
+
+.authform p:hover{
+    cursor: pointer;
+    color: var(--col1);
+}
+
+.authform .or{
+    text-align: center;
+    margin: 10px 0px;
+    padding: 0px;
+    font-size: 20px;
+    color: gray;
+}
+
+.pass h1{
+    color: black;
+    font-size: 3rem;
+    font-weight: 800;
+    margin: 0 0 20px 0;          
+    /* margin-top: 10px; */
+    margin-left: 8%;
+    padding: 0;
+    letter-spacing: 1px;
+}
