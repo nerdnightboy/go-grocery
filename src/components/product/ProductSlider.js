@@ -14,7 +14,7 @@ const ProductSlider = ({products, categoryname}) => {
   },
   desktop: {
     breakpoint: { max: 3000, min: 1024 },
-    items: 3
+    items: 5
   },
   tablet: {
     breakpoint: { max: 1024, min: 464 },
@@ -30,9 +30,9 @@ const ProductSlider = ({products, categoryname}) => {
     <div className='productsliderout'>
         <h1>{categoryname}</h1>
         <Carousel responsive={responsive} autoPlay={true} autoPlaySpeed={3000} swipeable={true} draggable={true}>
-            {products.map((item) => {
+            {products.map((item,index) => {
                 return (
-                    <ProductCard data={item} key={item.id} />
+                    <ProductCard data={item} key={index} />
                 )
             })}
         </Carousel>
