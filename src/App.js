@@ -10,6 +10,7 @@ import Contact from './pages/extras/Contact';
 import Login from './pages/authentication/Login';
 import SignUp from './pages/authentication/SignUp';
 import ForgotPass from './pages/authentication/ForgotPass';
+import CartPage from './pages/cart/CartPage';
 
 const App = () => {
   return (
@@ -23,6 +24,7 @@ const App = () => {
           <Route path='/login' element={<Login />} />
           <Route path='signup' element={<SignUp />} />
           <Route path='forgotpassword' element={<ForgotPass />} />
+          <Route path='/cart' element={<CartPage />} />
           <Route path='*' element={<div>
             <h1>H-A-H-A Seems Like You Don't Have Enough Knowledge to Access Us. 404 BTW )</h1>
           </div>} />

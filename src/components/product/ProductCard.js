@@ -1,14 +1,58 @@
 import React, { useState } from 'react'
 import './ProductCard.css'
 import { Link } from 'react-router-dom'
+import { toast } from 'react-toastify'
 const ProductCard = ({data}) => {
   const [show,setshow] = useState(false)
 
-  const [qty, setqty] = useState(1)
+  const [count, setcount] = useState(1)
 
     // const getproductid = () => {
     //   alert(data.id)
     // }
+
+    const addtocart = () =>{
+      let cart = JSON.parse(localStorage.getItem('cart'))
+      let productdata = data
+      if(cart){
+        // alert('1 item is added to the cart')
+        let itemincart = cart.find(item => item.productdata.productId === productdata.productId)
+        if(itemincart){
+          cart = cart.map(item =>{
+            if(item.productdata.productId === productdata.productId){
+              return {
+                ...item,
+                quantity: item.quantity + count
+              }
+            }
+            else{
+              return item
+            }
+          })
+          localStorage.setItem('cart',JSON.stringify(cart))
+        }
+        else{
+          cart = [
+            ...cart,{
+              productdata,
+              quantity: count
+            }
+          ]
+          localStorage.setItem('cart',JSON.stringify(cart))
+        }
+      }
+      else{
+        cart = [{
+          productdata,
+          quantity: count
+        }]
+        // console.log(cart)
+        localStorage.setItem('cart', JSON.stringify(cart))
+      }
+      // toast.success('Item added to cart successfully')
+      // setrelodenavbar(!relodenavbar)
+      window.location.reload()
+    }
   return (
     <div className='product'>
         <div className='s1'>
@@ -30,17 +74,17 @@ const ProductCard = ({data}) => {
           <div className='qty'>
             <button 
               onClick={()=>{
-                if(qty>1){
-                  setqty(qty-1)
+                if(count>1){
+                  setcount(count-1)
                 }
               }}
             >-</button>
-            <p>{qty}</p>
-            <button onClick={()=> setqty(qty+1)}>+</button>
+            <p>{count}</p>
+            <button onClick={()=> setcount(count+1)}>+</button>
           </div>
           <button className='addtocart' onClick={()=>{
             setshow(false)
-            alert('Added to cart')
+            addtocart()
           }}>Add to cart</button>
         </div> : 
           <div className='addbtn'>

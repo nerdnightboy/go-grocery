@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom'
 const SignUp = () => {
   return (
     <div className='authpage'>
-    <Navbar />
+    <Navbar relodenavbar={false} />
 
 
     <div className='authcont'>

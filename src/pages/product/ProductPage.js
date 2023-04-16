@@ -9,6 +9,8 @@ import './ProductPage.css'
 import Footer1 from '../../components/footer/Footer1'
 import Footer2 from '../../components/footer/Footer2'
 import ProductSlider from '../../components/product/ProductSlider'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const ProductPage = () => {
@@ -149,6 +151,50 @@ const ProductPage = () => {
     }
 ]
 
+const[relodenavbar, setrelodenavbar] = useState(false)
+
+const addtocart = () =>{
+  let cart = JSON.parse(localStorage.getItem('cart'))
+  if(cart){
+    // alert('1 item is added to the cart')
+    let itemincart = cart.find(item => item.productdata.productId === productdata.productId)
+    if(itemincart){
+      cart = cart.map(item =>{
+        if(item.productdata.productId === productdata.productId){
+          return {
+            ...item,
+            quantity: item.quantity + count
+          }
+        }
+        else{
+          return item
+        }
+      })
+      localStorage.setItem('cart',JSON.stringify(cart))
+    }
+    else{
+      cart = [
+        ...cart,{
+          productdata,
+          quantity: count
+        }
+      ]
+      localStorage.setItem('cart',JSON.stringify(cart))
+    }
+  }
+  else{
+    cart = [{
+      productdata,
+      quantity: count
+    }]
+    // console.log(cart)
+    localStorage.setItem('cart', JSON.stringify(cart))
+  }
+  setrelodenavbar(!relodenavbar)
+  toast.success('Item added to cart successfully')
+  // window.location.relode()
+}
+
   return (
     <div className='productpage'>
       {/* <h1>Product id is - {productid}</h1>
@@ -156,7 +202,7 @@ const ProductPage = () => {
         {JSON.stringify(productdata)}
       </p> */}
 
-      <Navbar />
+      <Navbar relodenavbar={relodenavbar} />
 
       <div className='pc1'>
         <Link to='/'>
@@ -208,9 +254,9 @@ const ProductPage = () => {
 
           <div className='btncont'>
             <button onClick={() => {
-              alert('Added to cart')
+              addtocart()
             }}>
-              Add to Cart
+              Add to cart
             </button>
             <button onClick={() => {
               alert('Order is Placed redirecting to payment......')

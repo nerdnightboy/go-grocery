@@ -8,7 +8,7 @@ import './ExtraPages.css'
 const About = () => {
   return (
     <div className='extrapage'>
-        <Navbar />
+        <Navbar relodenavbar={false} />
         <SingleBanner heading='About Us' bannerimage='https://images.unsplash.com/photo-1604719312566-8912e9227c6a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80'/>
 
         <div className='pgleft pgcommon'>

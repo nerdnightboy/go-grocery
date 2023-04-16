@@ -51,7 +51,7 @@ const Home = () => {
 
   return (
     <div>
-      <Navbar />
+      <Navbar relodenavbar={false} />
       <BannerSlider />
       <HomeCatagories />
       <ProductSidebar />

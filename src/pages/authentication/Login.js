@@ -7,7 +7,7 @@ import './AuthPage.css'
 const Login = () => {
   return (
     <div className='authpage'>
-      <Navbar />
+      <Navbar relodenavbar={false} />
 
 
       <div className='authcont'>
