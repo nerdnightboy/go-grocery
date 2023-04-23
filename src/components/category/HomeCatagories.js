@@ -12,28 +12,28 @@ const HomeCatagories = () => {
             <img src={image1} alt='image1' />
             <div className='content'>
                 <h1>Grocery</h1>
-                <span>Shop your home grocery now</span>
+                <p>Shop your home grocery now</p>
             </div>
         </div>
         <div className='container'>
             <img src={image2} alt='image2' />
             <div className='content'>
                 <h1>Doorstep</h1>
-                <span>Order items to your doorstep</span>
+                <p>Order items to your doorstep</p>
             </div>
         </div>
         <div className='container'>
             <img src={image3} alt='image3' />
             <div className='content'>
                 <h1>Fruits</h1>
-                <span>Get the best quality fresh food</span>
+                <p>Get the best quality fresh food</p>
             </div>
         </div>
         <div className='container'>
             <img src={image4} alt='image4' />
             <div className='content'>
                 <h1>Vegetables</h1>
-                <span>Buy healthy and fresh vegetables</span>
+                <p>Buy healthy and fresh vegetables</p>
             </div>
         </div>
     </div>

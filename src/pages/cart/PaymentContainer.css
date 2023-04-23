@@ -1,0 +1,55 @@
+.paymentcont{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+    padding: 10px 20px;
+    max-width: 1200px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    margin: 20px;
+}
+.paymentcont .paymenttypes{
+    display: flex;
+    flex-direction: row;
+}
+.paymentcont .paymenttypes .cl1 {
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    border-radius: 10px;
+    /* box-shadow: 0 0 10px rgba(38, 6, 114, 0.4); */
+    border: 1px solid black;
+    margin: 10px;
+    padding: 20px;
+    flex-direction: column;
+}
+
+.paymentcont .paymenttypes .cl1 img{
+    width: 200px;
+    height: 150px;
+    margin-bottom: 10px;
+    object-fit: contain;
+}
+
+.paymentcont .paymentagreement{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 10px;
+    background-color: white;
+    border-radius: 10px;
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.4); */
+}
+
+
+
+.paymentcont .c2 span{
+    font-size: 20px;
+    font-weight: 600;
+    color: red;
+}
